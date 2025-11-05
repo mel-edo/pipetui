@@ -1,22 +1,22 @@
-# pipr_mvp
+# PipeTUI
 
-Minimal weekend MVP inspired by `pipr`:
+## Current features
 
 - Single-line pipeline input (e.g., `ls -la | grep src | head -n 5`)
-- Runs via your shell (`sh -c` / `cmd /C`) and shows stdout/stderr
-- History navigation with ↑/↓
-- Quit with `q` or `Esc`
+- Executes through the host shell (`sh -c` / `cmd /C`) and displays stdout/stderr
+- History navigation with ↑/↓ plus persistent storage between runs
+- Editing with ←/→, Home/End, Ctrl+A/E/U, Backspace/Delete
+- Status line showing exit code and key bindings; quit with `Esc` or `Ctrl+C`
 
 ## Build & Run
 
 ```bash
-cd pipr_mvp
+git clone https://github.com/mel-edo/pipetui
+cd pipetui
 cargo run
 ```
 
-## Next steps
+## Planned features
 
-- Multi-stage editor UI (add/remove stages)
-- Live streaming output (spawn child and read pipes incrementally)
-- Syntax highlighting
-- Persistent history
+- Live streaming of process output instead of waiting for command completion
+- Syntax highlighting for commands and pipes

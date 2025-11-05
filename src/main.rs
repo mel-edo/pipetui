@@ -312,7 +312,7 @@ fn ui<B: ratatui::backend::Backend>(f: &mut ratatui::Frame, app: &App) {
         Span::styled("Status: ", Style::default().add_modifier(Modifier::BOLD)),
         Span::raw(&app.status_line),
         Span::raw("   "),
-        Span::raw("Keys: Enter=run  Esc/q=quit  Ctrl+u=clear  ↑/↓=history  ←/→=move  Home/End"),
+        Span::raw("Keys: Enter=run  Esc=quit  Ctrl+u=clear  ↑/↓=history  ←/→=move  Home/End"),
     ]));
     f.render_widget(status, bottom_chunks[1]);
 
@@ -394,7 +394,7 @@ fn main() -> Result<()> {
                     KeyCode::Char('e') if key.modifiers.contains(KeyModifiers::CONTROL) => {
                         app.move_cursor_end();
                     }
-                    KeyCode::Esc | KeyCode::Char('q') => break,
+                    KeyCode::Esc => break,
                     KeyCode::Enter => {
                         let cmd = app.input.clone();
                         if !cmd.trim().is_empty() {
