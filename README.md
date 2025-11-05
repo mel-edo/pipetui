@@ -7,6 +7,7 @@
 - History navigation with ↑/↓ plus persistent storage between runs
 - Editing with ←/→, Home/End, Ctrl+A/E/U, Backspace/Delete
 - Status line showing exit code and key bindings; quit with `Esc` or `Ctrl+C`
+- Live streaming of process output instead of waiting for command completion
 
 ## Build & Run
 
@@ -18,5 +19,4 @@ cargo run
 
 ## Planned features
 
-- Live streaming of process output instead of waiting for command completion
 - Syntax highlighting for commands and pipes
