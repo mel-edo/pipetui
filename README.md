@@ -1,6 +1,6 @@
 # PipeTUI
 
-## Current features
+## Features
 
 - Single-line pipeline input (e.g., `ls -la | grep src | head -n 5`)
 - Executes through the host shell (`sh -c` / `cmd /C`) and displays stdout/stderr
@@ -16,7 +16,3 @@ git clone https://github.com/mel-edo/pipetui
 cd pipetui
 cargo run
 ```
-
-## Planned features
-
-- Syntax highlighting for commands and pipes
